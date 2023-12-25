@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Resource Reservation</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/reservation">Reservation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/reservator" >Reservator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/resource" >Resource</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <div class="nav-item dropdown" *ngIf="userProfile; else loginTemplate">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{userProfile?.email}}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" (click)="profile()">Profile</a></li>
+          </ul>
+        </div>
+        <ng-template #loginTemplate>
+          <div class="nav-item">
+            <button class="btn btn-sm btn-outline-success" (click)="login()">Login</button>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

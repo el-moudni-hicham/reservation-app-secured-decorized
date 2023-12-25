@@ -1,0 +1,26 @@
+<div class="card text-center m-5 p-5">
+    <div class="card-header">
+      <h5>All Customers</h5>
+    </div>
+    <div class="card-body">
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let resource of resources">
+              <td>{{ resource.id }}</td>
+              <td>{{ resource.name }}</td>
+              <td>{{ resource.type }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
