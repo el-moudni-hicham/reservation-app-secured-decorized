@@ -1,1 +1,28 @@
-<p>reservator works!</p>
+<div class="card text-center m-5 p-5">
+    <div class="card-header">
+      <h5>All Reservators</h5>
+    </div>
+    <div class="card-body">
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Function</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let reservator of reservators">
+              <td>{{ reservator.id }}</td>
+              <td>{{ reservator.name }}</td>
+              <td>{{ reservator.email }}</td>
+              <td>{{ reservator.function }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

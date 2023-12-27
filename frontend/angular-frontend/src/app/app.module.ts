@@ -10,6 +10,7 @@ import { ReservatorComponent } from './reservator/reservator.component';
 import { ResourceComponent } from './resource/resource.component';
 import { HttpClientModule } from '@angular/common/http';
 
+/*
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
@@ -25,6 +26,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
       }
     });
 }
+*/
 
 @NgModule({
   declarations: [
@@ -40,13 +42,15 @@ function initializeKeycloak(keycloak: KeycloakService) {
     HttpClientModule
   ],
   providers: [
+  ],
+  bootstrap: [AppComponent]
+  /*
     {
       provide: APP_INITIALIZER,
       useFactory: initializeKeycloak,
       multi: true,
       deps: [KeycloakService]
     }
-  ],
-  bootstrap: [AppComponent]
+    */
 })
 export class AppModule { }

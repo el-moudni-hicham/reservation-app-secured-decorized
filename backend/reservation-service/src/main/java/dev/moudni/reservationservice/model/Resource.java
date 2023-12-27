@@ -1,6 +1,6 @@
-package com.example.reservationservice.model;
+package dev.moudni.reservationservice.model;
 
-import com.example.reservationservice.enums.ResourceType;
+import dev.moudni.reservationservice.enums.ResourceType;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.*;

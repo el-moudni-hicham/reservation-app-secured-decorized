@@ -6,9 +6,9 @@ import { ResourceComponent } from './resource/resource.component';
 import { AuthGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
-  { path: 'reservation', component: ReservationComponent, canActivate : [AuthGuard], data : {roles:['ADMIN']}},
-  { path: 'reservator', component: ReservatorComponent, canActivate : [AuthGuard], data : {roles:['ADMIN']}},
-  { path: 'resource', component: ResourceComponent, canActivate : [AuthGuard], data : {roles:['ADMIN']}},
+  { path: 'reservation', component: ReservationComponent},
+  { path: 'reservator', component: ReservatorComponent},
+  { path: 'resource', component: ResourceComponent}, //, canActivate : [AuthGuard], data : {roles:['ADMIN']}
 ];
 
 @NgModule({

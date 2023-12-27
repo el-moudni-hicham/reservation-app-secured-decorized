@@ -1,1 +1,32 @@
-<p>reservation works!</p>
+<div class="card text-center m-5 p-5">
+    <div class="card-header">
+      <h5>All Reservations</h5>
+    </div>
+    <div class="card-body">
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Context</th>
+              <th>Date</th>
+              <th>Duration</th>
+              <th>Resource</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let reservation of reservations">
+              <td>{{ reservation.id }}</td>
+              <td>{{ reservation.name }}</td>
+              <td>{{ reservation.context }}</td>
+              <td>{{ reservation.date }}</td>
+              <td>{{ reservation.duration}}</td>
+              <td>{{ reservation.resource.name}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

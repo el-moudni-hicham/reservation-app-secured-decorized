@@ -1,10 +1,9 @@
-package com.example.reservationservice.web;
+package dev.moudni.reservationservice.web;
 
-import com.example.reservationservice.entites.Reservation;
-import com.example.reservationservice.feign.ResourceFeign;
-import com.example.reservationservice.repository.PersonRepository;
-import com.example.reservationservice.repository.ReservationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import dev.moudni.reservationservice.entites.Reservation;
+import dev.moudni.reservationservice.feign.ResourceFeign;
+import dev.moudni.reservationservice.repository.PersonRepository;
+import dev.moudni.reservationservice.repository.ReservationRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,13 +16,12 @@ import java.util.List;
 public class ReservationController {
     private ReservationRepository reservationRepository;
     private PersonRepository personRepository;
-
-    @Autowired
     private ResourceFeign resourceFeign;
 
-    public ReservationController(ReservationRepository reservationRepository, PersonRepository personRepository) {
+    public ReservationController(ReservationRepository reservationRepository, PersonRepository personRepository, ResourceFeign resourceFeign) {
         this.reservationRepository = reservationRepository;
         this.personRepository = personRepository;
+        this.resourceFeign = resourceFeign;
     }
 
     @GetMapping("/reservations")
@@ -31,6 +29,7 @@ public class ReservationController {
         List<Reservation> reservations = reservationRepository.findAll();
         reservations.forEach(reservation -> {
             reservation.setResource(resourceFeign.getResourcer(reservation.getIdResource()));
+            reservation.setPerson(personRepository.findById(reservation.getPerson().getId()).get());
         });
         return reservations;
     }
@@ -39,6 +38,7 @@ public class ReservationController {
     public Reservation getReservation(@PathVariable Long id) {
         Reservation reservation = reservationRepository.findById(id).get();
         reservation.setResource(resourceFeign.getResourcer(reservation.getIdResource()));
+        reservation.setPerson(personRepository.findById(reservation.getPerson().getId()).get());
         return reservation;
     }
 }

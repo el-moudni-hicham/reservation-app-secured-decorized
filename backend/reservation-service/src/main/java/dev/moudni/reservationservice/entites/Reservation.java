@@ -1,10 +1,11 @@
-package com.example.reservationservice.entites;
+package dev.moudni.reservationservice.entites;
 
-import com.example.reservationservice.model.Resource;
+import dev.moudni.reservationservice.model.Resource;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -20,10 +21,11 @@ public class Reservation {
     private Long id;
     private String name;
     private String context;
-    private Date date;
+    private LocalDate date;
     private double duration;
 
     @ManyToOne
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Person person;
 
     private Long idResource;

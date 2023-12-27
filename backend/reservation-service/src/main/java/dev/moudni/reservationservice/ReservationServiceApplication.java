@@ -1,15 +1,16 @@
-package com.example.reservationservice;
+package dev.moudni.reservationservice;
 
-import com.example.reservationservice.entites.Person;
-import com.example.reservationservice.entites.Reservation;
-import com.example.reservationservice.repository.PersonRepository;
-import com.example.reservationservice.repository.ReservationRepository;
+import dev.moudni.reservationservice.entites.Person;
+import dev.moudni.reservationservice.entites.Reservation;
+import dev.moudni.reservationservice.repository.PersonRepository;
+import dev.moudni.reservationservice.repository.ReservationRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -56,7 +57,7 @@ public class ReservationServiceApplication {
 							.idResource(1L)
 							.person(people.get(0))
 							.duration(4)
-							.date(new Date())
+							.date(LocalDate.now())
 							.build(),
 					Reservation.builder()
 							.context("CONTEXT2")
@@ -64,7 +65,7 @@ public class ReservationServiceApplication {
 							.idResource(2L)
 							.person(people.get(1))
 							.duration(6)
-							.date(new Date())
+							.date(LocalDate.now())
 							.build(),
 					Reservation.builder()
 							.context("CONTEXT3")
@@ -72,7 +73,7 @@ public class ReservationServiceApplication {
 							.person(people.get(2))
 							.idResource(3L)
 							.duration(8)
-							.date(new Date())
+							.date(LocalDate.now())
 							.build(),
 					Reservation.builder()
 							.context("CONTEXT4")
@@ -80,7 +81,7 @@ public class ReservationServiceApplication {
 							.person(people.get(3))
 							.idResource(1L)
 							.duration(2)
-							.date(new Date())
+							.date(LocalDate.now())
 							.build()
 			);
 
