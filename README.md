@@ -374,3 +374,11 @@ Secure the application with Keycloak for authentication.
 
 Deploy the application using Docker and Docker Compose.
 
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/a8e43762-f1cb-4864-afc3-3488c4c77b12)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/46e9affa-9962-4030-8765-7a518a68195c)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/8290bd99-22b6-4f3d-8679-300848958fad)
+
+
+
