@@ -241,12 +241,14 @@ Develop and test the following microservices:
 
 Develop and test the `resources-service` microservice, including:
 
+```
 - Entities
 - DAO (Data Access Object)
 - Service
 - DTO (Data Transfer Object)
 - Mapper
 - RestController
+```
 
 * H2 Database
   
@@ -269,6 +271,8 @@ Develop and test the `resources-service` microservice, including:
 
 Develop and test the `reservation-service` microservice, including:
 
+
+```
 - Entities
 - DAO
 - Service
@@ -276,6 +280,7 @@ Develop and test the `reservation-service` microservice, including:
 - Mapper
 - RestController
 - Rest client using Open Feign
+```
 
 * H2 Database
 
