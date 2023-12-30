@@ -43,6 +43,7 @@ Technical architecture for the project, including the microservices and their in
 ### 2. Maven Project
 
 Create a Maven project that includes the following microservices:
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/09feb266-255a-4a84-ad5c-e3341589bec0)
 
 - `resources-service`
 - `reservation-service`
@@ -50,6 +51,7 @@ Create a Maven project that includes the following microservices:
 - `discovery-service`
 - `config-service`
 - `angular-front-app`
+
 
 ### 3. Technical Microservices Development and Testing
 
