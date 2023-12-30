@@ -25,7 +25,6 @@ public class Reservation {
     private double duration;
 
     @ManyToOne
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Person person;
 
     private Long idResource;

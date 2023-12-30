@@ -19,17 +19,23 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
-        <module name="resources-service" />
+        <module name="resource-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="resources-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="configuration-service" options="" />
+      <module name="configuration-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
-      <module name="gateway-service" options="" />
-      <module name="reservation-service" options="" />
+      <module name="gateway-service" options="-parameters" />
+      <module name="reservation-service" options="-parameters" />
+      <module name="resource-service" options="-parameters" />
       <module name="resources-service" options="-parameters" />
     </option>
   </component>

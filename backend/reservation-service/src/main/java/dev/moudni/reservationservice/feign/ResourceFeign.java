@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "RESOURCE-SERVICE") //, configuration = FeignInterceptor.class
+@FeignClient(name = "RESOURCE-SERVICE", configuration = FeignInterceptor.class)
 public interface ResourceFeign {
-    @GetMapping("/resource-api/resource/{id}")
+    @GetMapping("/resource-api/resources/{id}")
     @CircuitBreaker(name = "resource", fallbackMethod = "getDefaultResource")
     Resource getResourcer(@PathVariable Long id);
     @GetMapping("/resource-api/resources")

@@ -1,5 +1,4 @@
-/*
-package com.example.reservationservice.feign;
+package dev.moudni.reservationservice.feign;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
@@ -19,4 +18,4 @@ public class FeignInterceptor implements RequestInterceptor {
         requestTemplate.header("Authorization","Bearer "+tokenValue);
     }
 }
-*/
+

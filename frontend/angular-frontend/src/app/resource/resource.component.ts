@@ -1,5 +1,6 @@
+import { ResourceService } from './../services/resource.service';
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { Resource } from '../models/resource.model';
 
 
 @Component({
@@ -8,12 +9,12 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./resource.component.css']
 })
 export class ResourceComponent implements OnInit{
-  resources : any
-  constructor(private http: HttpClient) {
+  resources! : Resource[]
+  constructor(private resourceService: ResourceService) {
 
   }
   ngOnInit() {
-    this.http.get('http://localhost:8888/RESOURCE-SERVICE/resource-api/resources').subscribe({
+    this.resourceService.getResources().subscribe({
       next : data => {
         this.resources = data
       },

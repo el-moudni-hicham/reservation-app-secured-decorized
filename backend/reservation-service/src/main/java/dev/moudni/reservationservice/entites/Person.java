@@ -1,5 +1,6 @@
 package dev.moudni.reservationservice.entites;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,5 +15,6 @@ public class Person {
     private String function;
 
     @OneToMany(mappedBy = "person")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<Reservation> reservations;
 }

@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ReservatorService } from '../services/reservator.service';
 
 @Component({
   selector: 'app-reservator',
@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservatorComponent implements OnInit{
   reservators : any
-  public constructor(private http: HttpClient){
+  public constructor(private reservatorService: ReservatorService){
 
   }
 
   public ngOnInit(){
-    this.http.get("http://localhost:8888/RESERVATION-SERVICE/person-api/persons").subscribe({
-      next : data => {
+    this.reservatorService.getReservator().subscribe({
+      next: data => {
         this.reservators = data
       },
-      error : err => {
+      error: err => {
         console.log(err)
       }
     })

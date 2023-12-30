@@ -4,10 +4,7 @@ import dev.moudni.resourcesservice.dtos.ResourceResponseDTO;
 import dev.moudni.resourcesservice.exceptions.ResourceNotFoundException;
 import dev.moudni.resourcesservice.service.ResourceService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +22,10 @@ public class ResourceController {
         return resourceService.getResources();
     }
 
+    @GetMapping("/resources/search")
+    public List<ResourceResponseDTO> searchResources(@RequestParam(name = "keyword", defaultValue = "") String keyword){
+        return resourceService.serchResources("%"+keyword+"%");
+    }
     @GetMapping("/resources/{id}")
     public ResponseEntity<?> getResource(@PathVariable Long id){
         try {
@@ -34,4 +35,5 @@ public class ResourceController {
             return ResponseEntity.internalServerError().body(e.getMessage());
         }
     }
+
 }
