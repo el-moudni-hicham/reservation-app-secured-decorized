@@ -1,5 +1,17 @@
 # Microservices Reservation System
 
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Tasks](#tasks)
+   - [1. Technical Architecture](#1-technical-architecture)
+   - [2. Maven Project](#2-maven-project)
+   - [3. Technical Microservices Development and Testing](#3-technical-microservices-development-and-testing)
+   - [4. Resources-Service Development and Testing](#4-resources-service-development-and-testing)
+   - [5. Reservation-Service Development and Testing](#5-reservation-service-development-and-testing)
+   - [6. Angular Frontend](#6-angular-frontend)
+   - [7. Security](#7-security)
+   - [8. Deployment with Docker](#8-deployment-with-docker)
+
 ## Project Overview
 
 ```
@@ -228,10 +240,15 @@ Develop and test the following microservices:
 
 - **Gateway Service**:
 
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/c03ab2cb-5e27-4817-8e73-d0dd2c246573)
+
+
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/f4cf026b-087d-40f9-afda-519053b48897)
 
   
 - **Config Service**:
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/7d981824-7bce-423e-a064-63869bb536ce)
 
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/3a7e2631-4a7e-4aec-86e2-6d76a109d4e3)
 
@@ -292,6 +309,11 @@ Develop and test the `reservation-service` microservice, including:
 
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/3b41d891-de2d-46be-9a80-2d7559222af5)
 
+* Resilience4J
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/86b9d95f-dce6-4617-a4c0-63744fb09add)
+
+
 * Swagger
 
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/eee421a2-3098-4691-8a5e-1791f85b0ec2)
@@ -299,6 +321,7 @@ Develop and test the `reservation-service` microservice, including:
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/d84cc5f4-8bb3-4c50-88cd-8a5a395a4937)
 
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/dbb07c5f-a373-451e-83da-fe13b11c029a)
+
 
 
 ### 6. Angular Frontend
