@@ -1,4 +1,4 @@
-# README for Microservices Reservation System
+# Microservices Reservation System
 
 ## Project Overview
 
@@ -43,13 +43,178 @@ Technical architecture for the project, including the microservices and their in
 ### 2. Maven Project
 
 Create a Maven project that includes the following microservices:
+
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/09feb266-255a-4a84-ad5c-e3341589bec0)
 
 - `resources-service`
+```
+C:.
+│   .gitignore
+│   Dockerfile
+│   HELP.md
+│   mvnw
+│   mvnw.cmd
+│   pom.xml
+│
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───dev
+│   │   │       └───moudni
+│   │   │           └───resourcesservice
+│   │   │               │   ResourcesServiceApplication.java
+│   │   │               │
+│   │   │               ├───dtos
+│   │   │               │       ResourceRequestDTO.java
+│   │   │               │       ResourceResponseDTO.java
+│   │   │               │
+│   │   │               ├───entites
+│   │   │               │       Resource.java
+│   │   │               │
+│   │   │               ├───enums
+│   │   │               │       ResourceType.java
+│   │   │               │
+│   │   │               ├───exceptions
+│   │   │               │       ResourceNotFoundException.java
+│   │   │               │
+│   │   │               ├───mappers
+│   │   │               │       ResourceMapper.java
+│   │   │               │
+│   │   │               ├───repository
+│   │   │               │       ResourceRepository.java
+│   │   │               │
+│   │   │               ├───security
+│   │   │               │       JwtAuthConverter.java
+│   │   │               │       SecurityConfiguration.java
+│   │   │               │
+│   │   │               ├───service
+│   │   │               │       ResourceService.java
+│   │   │               │       ResourceServiceImpl.java
+│   │   │               │
+│   │   │               └───web
+│   │   │                       ResourceController.java
+│   │   │
+│   │   └───resources
+│   │       │   application.properties
+│   │       │
+│   │       ├───static
+│   │       └───templates
+│
+```
 - `reservation-service`
+```
+C:.
+│   .gitignore
+│   Dockerfile
+│   HELP.md
+│   mvnw
+│   mvnw.cmd
+│   pom.xml
+│
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───dev
+│   │   │       └───moudni
+│   │   │           └───reservationservice
+│   │   │               │   ReservationServiceApplication.java
+│   │   │               │
+│   │   │               ├───entites
+│   │   │               │       Person.java
+│   │   │               │       Reservation.java
+│   │   │               │
+│   │   │               ├───enums
+│   │   │               │       ResourceType.java
+│   │   │               │
+│   │   │               ├───feign
+│   │   │               │       FeignInterceptor.java
+│   │   │               │       ResourceFeign.java
+│   │   │               │
+│   │   │               ├───model
+│   │   │               │       Resource.java
+│   │   │               │
+│   │   │               ├───repository
+│   │   │               │       PersonRepository.java
+│   │   │               │       ReservationRepository.java
+│   │   │               │
+│   │   │               ├───security
+│   │   │               │       JwtAuthConverter.java
+│   │   │               │       SecurityConfiguration.java
+│   │   │               │
+│   │   │               └───web
+│   │   │                       PersonController.java
+│   │   │                       ReservationController.java
+│   │   │
+│   │   └───resources
+│   │       │   application.properties
+│   │       │
+│   │       ├───static
+│   │       └───templates
+```
 - `gateway-service`
+```
+C:.
+│   .gitignore
+│   Dockerfile
+│   HELP.md
+│   mvnw
+│   mvnw.cmd
+│   pom.xml
+│
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───dev
+│   │   │       └───moudni
+│   │   │           └───gatewayservice
+│   │   │                   GatewayServiceApplication.java
+│   │   │
+│   │   └───resources
+│   │           application.properties
+│   │           application.yml
+```
 - `discovery-service`
+```
+C:.
+│   .gitignore
+│   Dockerfile
+│   HELP.md
+│   mvnw
+│   mvnw.cmd
+│   pom.xml
+│
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───dev
+│   │   │       └───moudni
+│   │   │           └───discoveryservice
+│   │   │                   DiscoveryServiceApplication.java
+│   │   │
+│   │   └───resources
+│   │           application.properties
+```
 - `config-service`
+```
+C:.
+│   .gitignore
+│   Dockerfile
+│   HELP.md
+│   mvnw
+│   mvnw.cmd
+│   pom.xml
+│
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───dev
+│   │   │       └───moudni
+│   │   │           └───configurationservice
+│   │   │                   ConfigurationServiceApplication.java
+│   │   │
+│   │   └───resources
+│   │           application.properties
+```
 - `angular-front-app`
 
 
@@ -57,9 +222,20 @@ Create a Maven project that includes the following microservices:
 
 Develop and test the following microservices:
 
-- **Discovery Service**: Service discovery using Eureka Server or Consul Discovery.
-- **Gateway Service**: API gateway using Spring Cloud Gateway.
-- **Config Service**: Configuration service using Spring Cloud Config or Consul Config.
+- **Discovery Service**:
+  
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/a6b50497-5ebf-4245-93bd-28ae2637ace8)
+
+- **Gateway Service**:
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/f4cf026b-087d-40f9-afda-519053b48897)
+
+  
+- **Config Service**:
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/3a7e2631-4a7e-4aec-86e2-6d76a109d4e3)
+
+`config git repository` : [https://github.com/el-moudni-hicham/exam-config-git-repo](https://github.com/el-moudni-hicham/exam-config-git-repo)
 
 ### 4. Resources-Service Development and Testing
 
@@ -71,6 +247,23 @@ Develop and test the `resources-service` microservice, including:
 - DTO (Data Transfer Object)
 - Mapper
 - RestController
+
+* H2 Database
+  
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/4c910ac0-ba71-4c40-b282-aa6c9a92ed1b)
+
+* Endpoints Tests
+  
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/8934a1f0-6a2b-4dcf-9237-947f04a28bad)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/151e4dae-9238-4e3f-a8b5-3b3b0c394f3e)
+
+* Swagger
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/402fddb5-4532-4801-9d89-a7247285ec78)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/9553569d-0e36-4ec4-83de-b9a3269ca784)
+
 
 ### 5. Reservation-Service Development and Testing
 
@@ -84,6 +277,25 @@ Develop and test the `reservation-service` microservice, including:
 - RestController
 - Rest client using Open Feign
 
+* H2 Database
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/d30e6b84-d4e9-442d-b1ca-cd67d67fdfac)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/43944b0b-21a8-4c37-a7b0-447e859d3c8e)
+
+* Endpoints Tests
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/3b41d891-de2d-46be-9a80-2d7559222af5)
+
+* Swagger
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/eee421a2-3098-4691-8a5e-1791f85b0ec2)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/d84cc5f4-8bb3-4c50-88cd-8a5a395a4937)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/dbb07c5f-a373-451e-83da-fe13b11c029a)
+
+
 ### 6. Angular Frontend
 
 Develop a simple web frontend for the application using the Angular framework.
@@ -92,19 +304,15 @@ Develop a simple web frontend for the application using the Angular framework.
 
 Secure the application with Keycloak for authentication.
 
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/23391730-4219-4923-af68-73bce1d94b8f)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/af41673a-a6ab-4b4b-aa6a-7deff35891ad)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/df1d6ef3-19be-4a4e-85ad-dc7ca7b4c31a)
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/77d36793-80eb-46e2-94f7-db368f037588)
+
 ### 8. Deployment with Docker
 
 Deploy the application using Docker and Docker Compose.
 
-## Submission
-
-Submit a PDF report and the source code of the projects in a zip format, addressing the following questions:
-
-1. Detailed technical architecture of the project.
-2. Maven project structure.
-3. Development and testing of discovery-service, gateway-service, and config-service.
-4. Development and testing of resources-service.
-5. Development and testing of reservation-service.
-6. Implementation of the Angular frontend.
-7. Security implementation with Keycloak.
-8. Deployment using Docker and Docker Compose.
