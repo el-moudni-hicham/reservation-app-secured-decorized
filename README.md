@@ -328,6 +328,23 @@ Develop and test the `reservation-service` microservice, including:
 
 Develop a simple web frontend for the application using the Angular framework.
 
+* Login Page :
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/5a5ee272-ca00-4984-83b8-ced516f44b9a)
+
+* Dashboard Reservations
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/decc5246-b6fb-4fc8-ace1-1cbd8963e96e)
+
+* Reservators 
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/59521089-44a5-41a6-b336-763fdb6171df)
+
+* Resources
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/be8f676e-0d54-4900-b8f7-9933e0c4b43e)
+
+  
 ### 7. Security
 
 Secure the application with Keycloak for authentication.
