@@ -380,5 +380,8 @@ Deploy the application using Docker and Docker Compose.
 
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/8290bd99-22b6-4f3d-8679-300848958fad)
 
+Now frontend app is accessible in port `8083` instead of `4200` 
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/13332f12-c1f2-45e9-9515-1a185bfddf54)
 
 
