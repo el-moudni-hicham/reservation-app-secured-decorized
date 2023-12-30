@@ -4,7 +4,8 @@
 
 ```
 This project aims to create a reservation management application based on a microservices architecture. 
-The application will handle reservations for resources, with each reservation associated with a single resource.
+The application will handle reservations for resources, with each reservation associated with
+a single resource.
 
 A resource is defined by its ID, name, and type (MATERIEL_INFO, MATERIEL_AUDIO_VISUEL). 
 A reservation is defined by its ID, name, context, date, and duration, and is made by a person. 
@@ -32,9 +33,12 @@ For the application,
 
 ## Tasks
 
-### 1. Architecture
+### 1. Technical Architecture
 
-Establish a technical architecture for the project, including the microservices and their interactions. Identify the technologies and tools used for each component.
+Technical architecture for the project, including the microservices and their interactions. Identify the technologies and tools used for each component.
+
+![arch (1)](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/f83c29da-97f1-4536-9fd8-f5c9ead81462)
+
 
 ### 2. Maven Project
 
