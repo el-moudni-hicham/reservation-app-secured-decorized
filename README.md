@@ -336,6 +336,19 @@ Develop a simple web frontend for the application using the Angular framework.
 
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/decc5246-b6fb-4fc8-ace1-1cbd8963e96e)
 
+ - Display Reservator Infos
+   
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/2091a50e-8357-450b-8388-d4e15d45c6d3)
+
+ - Display Resource Infos
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/00acc3b8-60cf-4a50-a48e-287b80c83006)
+
+
+ - Display Resource Infos in case of fault tolerance
+
+![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/b3f2ea18-99d8-472b-9b4a-08bc76cfd984)
+
 * Reservators 
 
 ![image](https://github.com/el-moudni-hicham/reservation-app-secured-decorized/assets/85403056/59521089-44a5-41a6-b336-763fdb6171df)
